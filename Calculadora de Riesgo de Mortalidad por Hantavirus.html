@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<!-- saved from url=(0054)https://fernando-tortosa.shinyapps.io/F_PRON_HANTA_V2/ -->
+<html class=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!--<base href="_w_aedb5ab0/">--><base href=".">
+    <script type="text/javascript">
+(function() {
+  var workerId = '_w_aedb5ab0';
+  // remove base href if worker ID is in url
+  if (window.location.href.indexOf(workerId) > 0) {
+    document.querySelector('base').removeAttribute('href');
+  }
+})();
+</script>
+
+      <script type="text/javascript">
+      var __connect = {
+        shinyPre101: false
+      }
+      </script>
+      
+  
+  <script type="application/shiny-singletons"></script>
+  <script type="application/html-dependencies">jquery[3.6.0];shiny-css[1.10.0];shiny-busy-indicators[1.10.0];shiny-javascript[1.10.0];font-awesome[6.5.2];htmltools-fill[0.5.8.1];bootstrap[3.4.1]</script>
+<script src="./Calculadora de Riesgo de Mortalidad por Hantavirus_files/jquery.min.js.descarga"></script>
+<link href="./Calculadora de Riesgo de Mortalidad por Hantavirus_files/shiny.min.css" rel="stylesheet">
+<link href="./Calculadora de Riesgo de Mortalidad por Hantavirus_files/busy-indicators.css" rel="stylesheet">
+<script src="./Calculadora de Riesgo de Mortalidad por Hantavirus_files/shiny.min.js.descarga"></script>
+<link href="./Calculadora de Riesgo de Mortalidad por Hantavirus_files/all.min.css" rel="stylesheet">
+<link href="./Calculadora de Riesgo de Mortalidad por Hantavirus_files/v4-shims.min.css" rel="stylesheet">
+<link href="./Calculadora de Riesgo de Mortalidad por Hantavirus_files/fill.css" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="./Calculadora de Riesgo de Mortalidad por Hantavirus_files/bootstrap.min.css" rel="stylesheet">
+<link href="./Calculadora de Riesgo de Mortalidad por Hantavirus_files/bootstrap-accessibility.min.css" rel="stylesheet">
+<script src="./Calculadora de Riesgo de Mortalidad por Hantavirus_files/bootstrap.min.js.descarga"></script>
+<script src="./Calculadora de Riesgo de Mortalidad por Hantavirus_files/bootstrap-accessibility.min.js.descarga"></script>  <title>Calculadora de Riesgo de Mortalidad por Hantavirus</title>
+<script src="./Calculadora de Riesgo de Mortalidad por Hantavirus_files/sockjs.min.js.descarga"></script>
+<script src="./Calculadora de Riesgo de Mortalidad por Hantavirus_files/shiny-server-client.min.js.descarga"></script>
+<script>preShinyInit({reconnect:true,reconnectTimeout:15000,disableProtocols:["htmlfile","xdr-streaming","xdr-polling","websocket"],token:true,workerId:true,subappTag:true,extendSession:true,fixupInternalLinks:true});</script>
+<link rel="stylesheet" type="text/css" href="./Calculadora de Riesgo de Mortalidad por Hantavirus_files/rstudio-connect.css">
+<link rel="stylesheet" type="text/css" href="./Calculadora de Riesgo de Mortalidad por Hantavirus_files/shinyapps.css"></head>
+<body class="">
+<script type="text/javascript" src="./Calculadora de Riesgo de Mortalidad por Hantavirus_files/iframeResizer.contentWindow.min.js.descarga"></script>
+<script type="text/javascript" src="./Calculadora de Riesgo de Mortalidad por Hantavirus_files/shinyapps.frame.content.js.descarga"></script>
+<script type="text/javascript" src="./Calculadora de Riesgo de Mortalidad por Hantavirus_files/shinyapps.js.descarga"></script>
+  <div class="container-fluid">
+    <h2>Calculadora de Riesgo de Mortalidad por Hantavirus</h2>
+    <div class="row">
+      <div class="col-sm-4">
+        <form class="well" role="complementary">
+          <div class="form-group shiny-input-container">
+            <div class="checkbox">
+              <label>
+                <input id="ageOver40" type="checkbox" class="shiny-input-checkbox shiny-bound-input">
+                <span>Mayor de 40 años</span>
+              </label>
+            </div>
+          </div>
+          <div class="form-group shiny-input-container">
+            <div class="checkbox">
+              <label>
+                <input id="femaleGender" type="checkbox" class="shiny-input-checkbox shiny-bound-input">
+                <span>Género femenino</span>
+              </label>
+            </div>
+          </div>
+          <div class="form-group shiny-input-container">
+            <div class="checkbox">
+              <label>
+                <input id="hematocritOver42" type="checkbox" class="shiny-input-checkbox shiny-bound-input">
+                <span>Hematocrito mayor de 42%</span>
+              </label>
+            </div>
+          </div>
+          <div class="form-group shiny-input-container">
+            <div class="checkbox">
+              <label>
+                <input id="increasedCreatinine" type="checkbox" class="shiny-input-checkbox shiny-bound-input">
+                <span>Creatinina aumentada (&gt;1.4 mg/dl)</span>
+              </label>
+            </div>
+          </div>
+          <div class="form-group shiny-input-container">
+            <div class="checkbox">
+              <label>
+                <input id="chestInfiltrates" type="checkbox" class="shiny-input-checkbox shiny-bound-input">
+                <span>Infiltrados en radiografía de tórax</span>
+              </label>
+            </div>
+          </div>
+          <div class="form-group shiny-input-container">
+            <div class="checkbox">
+              <label>
+                <input id="vomiting" type="checkbox" class="shiny-input-checkbox shiny-bound-input">
+                <span>Presencia de vómitos</span>
+              </label>
+            </div>
+          </div>
+          <div class="form-group shiny-input-container">
+            <div class="checkbox">
+              <label>
+                <input id="plateletsBelow100" type="checkbox" class="shiny-input-checkbox shiny-bound-input">
+                <span>Recuento de Plaquetas &lt; 100,000/mm³</span>
+              </label>
+            </div>
+          </div>
+          <div class="form-group shiny-input-container">
+            <div class="checkbox">
+              <label>
+                <input id="astIncrease" type="checkbox" class="shiny-input-checkbox shiny-bound-input">
+                <span>Aumento de AST x 3</span>
+              </label>
+            </div>
+          </div>
+          <div class="form-group shiny-input-container">
+            <div class="checkbox">
+              <label>
+                <input id="headache" type="checkbox" class="shiny-input-checkbox shiny-bound-input">
+                <span>Presencia de Cefalea</span>
+              </label>
+            </div>
+          </div>
+          <div class="form-group shiny-input-container">
+            <div class="checkbox">
+              <label>
+                <input id="leukocytosis" type="checkbox" class="shiny-input-checkbox shiny-bound-input">
+                <span>Leucocitosis &gt; 12,000/mm³</span>
+              </label>
+            </div>
+          </div>
+          <button id="calculate" type="button" class="btn btn-default action-button shiny-bound-input">Calcular Puntaje de Riesgo</button>
+          <a id="download_report" class="btn btn-default shiny-download-link shiny-bound-output" href="https://fernando-tortosa.shinyapps.io/F_PRON_HANTA_V2/_w_aedb5ab0/session/ac88a3050edf2dccfe4eea20024495de/download/download_report?w=aedb5ab0" target="_blank" download="" aria-live="polite">
+            <i class="fas fa-download" role="presentation" aria-label="download icon"></i>
+            Exportar a HTML
+          </a>
+        </form>
+      </div>
+      <div class="col-sm-8" role="main">
+        <div id="result" class="shiny-text-output shiny-bound-output" aria-live="polite">Tu puntaje de riesgo calculado es: 61.0
+Nivel de Riesgo: Alto Riesgo</div>
+        <div class="shiny-plot-output html-fill-item shiny-bound-output" id="risk_plot" style="width:100%;height:400px;" aria-live="polite"><img width="978.5250244140625" height="400" alt="Plot object" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABMcAAAH0CAIAAAC2J92kAAAACXBIWXMAAA3XAAAN1wFCKJt4AAAgAElEQVR4nO3de5zXc77A8ffMlGZ0LxINJYqils0mKTanC7mMNuoc7Mket4ejde/IsTywTitiY9naY489tcLquOWWuxO5hJ1QhAiV9qhoTdPFqN/5Y9oYW0yf6veb/J7Px/zR9zvfvvP+fR/f5tfr8f39vr+CTCYTAAAAkKQw1wMAAACwDVOVAAAApFOVAAAApFOVAAAApFOVAAAApFOVAAAApFOVAAAApFOVAAAApFOVAAAApFOVAAAApFOVAAAApFOVAAAApFOVAAAApFOVAAAApFOVAAAApFOVAAAApFOVAAAApFOVAAAApFOVAAAApFOVAAAApFOVAAAApFOVAAAApFOVAAAApFOVAAAApFOVAAAApFOVAAAApFOVAAAApFOVAAAApFOVAAAApFOVAAAApFOVAAAApFOVAAAApFOVAAAApFOVAAAApFOVAAAApFOVAAAApFOVAAAApFOVAAAApFOVAAAApFOVAAAApFOVAAAApFOVAAAApFOVAAAApFOVAAAApFOVAAAApFOVAAAApFOVAAAApFOVAAAApFOVAAAApFOVAAAApFOVAAAApFOVAAAApFOVAAAApFOVAAAApFOVAAAApFOVAAAApFOVAAAApFOVAAAApFOVAAAApFOVAAAApFOVAAAApFOVAAAApFOVAAAApFOVAAAApFOVAAAApFOVAAAApFOVAAAApFOVAAAApFOVAAAApFOVAAAApFOVAAAApFOVAAAApFOVAAAApFOVAAAApFOVAAAApFOVAAAApFOVAAAApFOVAAAApFOVAAAApFOVAAAApFOVAAAApFOVAAAApFOVAAAApFOVAAAApFOVAAAApKuX6wG2rlmzZuV6BADIvX333TfXIwDwveVaJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOlUJQAAAOkKMplMrmfYmgoKcj0BANny/X5GA4C6yrVKAAAA0qlKAAAA0qlKAAAA0qlKAAAA0qlKAAAA0qlKAAAA0qlKAAAA0qlKAAAA0qlKAAAA0qlKAAAA0qlKAAAA0qlKAAAA0qlKAAAA0qlKAAAA0qlKAAAA0qlKAAAA0qlKAAAA0qlKAAAA0qlKAAAA0qlKAAAA0qlKAAAA0qlKAAAA0qlK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Kxs/Ptq0if79173idIOqr1VWVcWwYfHUU7F6dRxySPz611FWFmPGbPgTR9b74INYtCg6dIhDD1235osvYubMGi+LffXV2Hff+MlPomPHePvtuPvuqKiIiLjiivjoo/iv/9rcxwgAwPddnajKiFi9evUDDzwwfvz4iRMnfv755z179sz1RLCVDRsWQ4bE2LHxxBPfttkjj8Tbb8ejj8acOevW3H13vP56zJoVp54a11331fpv6NMnHnkkVq+On/887r8/Pv88unePa6+N66+PPfaI4cO/2vKvf40//KHG3+3cOYYNi6FD48svIyKaNIljjlmXnfffv+72sAAAEBF15JNFZs2a1a9fv7Zt27700kurVq0aOHDg7NmzH3/88epb+GwWnyxC3dSuXbz+esyfH926xapV61b+8Y9x0kkb+GSRDbrnnhg0KE46KSZN2vAGb74ZnTp9c28tW8bs2bHTTtGtW/z5zxvd+f33x847R/fuERH77Rf33x+77bbuWx98EMccE2+8UYsHCVlXB57RACAP1Ym79ZxzzjlDhw598cUXqxenTJly4IEHXnjhhbmdCraiQw+Nxo2jpCQefzyefXbdV/UHflx1VTz7bIwe/R17qL4r7O67b/i7rVtHp06xfHncc0+N9UuXxpQpERF9+mx0zwcfHMccExddFBFRv37ccUdst10MGBCNG8eRR0ajRjFpUhQV1fKBAgDwvVcnXgH70ksvXX311esXGzZseN5555WVleVwJMiG3XffQBbuvXdExLJlERFNmkS/fvH55/H449/cbMcdI2KjnzhS/eGWK1du4NJNZeVXG2zQ6NHxyCPx9NMREV27xt57x89+Fo89FhHx8MNx+eVx003RqVPMmvUdjw4AgPxQJ65V7rDDDp/VvFvJkiVLWrZsmat5YKubMCEKCr75ddttERHHHRcFBXH00RERq1fHxInxyCPxjQ/a2X776NcvMpmNvor1k09iwYLYccf44Q9rrC8qin/4h4iIV1/d8F885pjo2TMuvnjdYvU/w4ULv9rgo48iIlq12qSHCwDA91idqMqysrLLLrvs//7v/6oXX3755XPPPXfQoEG5nQpyb/XquO22KCqKu+6KXXddt3KHHWLSpNh117jllpg7d93KoqIYPDgGD47WrdetuemmiIjbb4+uXdetadw4fve76NIlXn01XnhhAz+u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kq2tNmfmCy+88N577zVu3LigoKD6ZTM9evT40Y9+lOVRyTe1OTl32mmniFj/wsLCwsJOnTotWLAgi2OSd2pzZk6dOnXhwoXjx4/fZZddmjVrdu655+6///7f8m43yI5sRtA2X5WdO3cuLS2dOnVq9WJ5efmSJUv69u27qdvAllWbs27NmjWDBg067rjj7rvvvjZt2uRiTPJObc7MSy65ZObfPProoxExceLESZMm5WBc8kltTs599923ZcuWL730UvViVVXV66+/vvfee2d7VvJJbc7MgoKCL7/8csWKFevXVFRUuFsPOZfNCNrmX/BdWFg4fPjwK664omPHji1btjzzzDPLysr22GOPiLj11ls/+eSTkSNHfss2sJXU5sx88sknP/zwwx49elT/x73abrvt1qlTp9wNzvdcbc7M0tLS9e/sr745SseOHTt27JjLuckDtTk5i4uLzz777H/913/94osv2rZtO3bs2IqKitNPPz3Xs/N9Vpszc8CAAW3btj322GMvvfTS7bfffsKECW+++aZrleRKbiJoa3xcSfb98pe/3HPPPXfaaaef/exnK1asqF551FFH7bnnnt++DWxV335mjh079u//SQ4fPjynI5MXavM7s1r1awt9XiVZU5uT88orr+zYsWOzZs0OP/zwN998M0eTkl++88z86KOPTjjhhNatWzdr1qxv375+bZI1H3zwQdT8vMqcRFBBJpPZKrUKAABAHvCCbwAAANKpSgAAANKpSgAAANKpSgAAANKpSgAAANKpSgC2MXfdddfatWtzPUXecdgB2BhVCUCOZTKZ0aNHd+jQoXXr1qecckplZWX1+muuuWaXXXZp06bNDTfcsH7je+6555577iks9Py1UWVlZbNnz16/uLHD67ADsMVspc/BBIBaGjNmTKNGjSZOnPjwww/vtddegwYNymQyDz744C677PLUU0899thjO+6445NPPpnJZNasWdO1a9c5c+bkeuS6a/LkyVHz47A3eHg3tt5hByBBvVxXLQB5bc2aNTfccMNll13205/+NCKaNWvWq1ev995777nnnvvJT37Sp0+fiCgrK3vuuecOO+ywSZMmHXDAAXvttVeup66L7rzzzksvvXTu3LlfX7mxw9uuXTuHHYAtxUtZAMiluXPnzp8//6ijjqpe7NGjR/PmzZ955pkf/ehHU6ZMKS8vf/XVVx966KFu3bpVVVWNGjXqsssuy+3AdVb37t1vuummCRMmfH3lxg6vww7AFuRaJQC59PHHH0dEaWlp9WJBQUGbNm0WLVp0yimnvPLKK7179y4oKLjwwguPPPLI8ePH9+vXr23btjmdt+5q3759+/btP/zww6+v3NjhddgB2IJUJQC5tGTJkoho1KjR+jWNGzdevHhxRIwaNXgLGc8AAAKgSURBVOqqq66KiMLCwlWrVl1//fXTpk2r3mbt2rXuHFMbGzu8DjsAW5DnBgByqXnz5hGx/gakEVFRUVG9MiIKCwurM+bmm28ePHhw69atn3766Y4dOxYXFx9zzDFLly7NyczbkI0dXocdgC1IVQKQS61bt46/vVCz2qJFi3beeeevb1NRUTFu3LgRI0ZUVlYOHjx45MiR7733Xr169S666KJsj7ut2djhddgB2IJUJQC51Llz59LS0qlTp1YvlpeXL1mypG/fvl/f5te//vXJJ5/cokWLuXPnFhcX/8u//Muuu+561llnzZgxIxcjb0s2dngddgC2IO+rBCCXCgsLhw8ffsUVV3Ts2LFly5ZnnnlmWVnZHnvssX6DTz/9dOLEiTNnzoyIDh06VFVV/eY3v+nXr9/YsWMPOuig3A2+bfiWw+uwA7ClFGQymVzPAEC+u+qqqyZMmFBRUTFw4MCbb765pKRk/bcuuuiinXba6fzzz69enD59+llnnTVv3rwjjjjid7/7XdOmTXM0ch314YcftmvX7pVXXunWrdv6lRs7vA47AFuEqgQAACCd91UCAACQTlUCAACQTlUCAACQTlUCAACQTlUCAACQTlUCAACQTlUCAACQTlUCAACQTlUCAACQTlUCAACQTlUCAACQTlUCAACQTlUCAACQTlUCAACQTlUCAACQTlUCAACQTlUCAACQTlUCAACQTlUCAACQTlUCAACQTlUCAACQTlUCAACQTlUCAACQTlUCAACQTlUCAACQTlUCAACQTlUCAACQTlUCAACQTlUCAACQTlUCAACQTlUCAACQTlUCAACQTlUCAACQTlUCAACQTlUCAACQTlUCAACQTlUCAACQTlUCAACQTlUCAACQTlUCAACQ7v8BqZPWUeLzzmEAAAAASUVORK5CYII="></div>
+        <div id="references" class="shiny-html-output shiny-bound-output" aria-live="polite"><h4>Fundamento del Modelo y Bibliografía</h4>
+<p><strong>Identificación de factores pronósticos para el desarrollo de un modelo de evaluación de riesgo (MER)</strong><br>
+Identificamos con la revisión sistemática, varios factores críticos asociados con un aumento en el riesgo de mortalidad en individuos con infección por hantavirus. La evidencia de certeza moderada sugirió que la edad superior a 40 años, el género femenino, niveles elevados de creatinina (&gt;1.4 mg/dL), hematocrito aumentado (&gt;42%) y la presencia de infiltrados en radiografías de tórax.</p>
+<p><strong>Selección de factores pronósticos</strong><br>
+Basado en nuestra revisión sistemática, los factores pronósticos más confiables asociados con la mortalidad por infección de hantavirus, que presentan una certeza de evidencia de moderada a alta, incluyen:
+</p><ul>
+  <li>Edad mayor de 40 años - OR 1.95 (1.32, 2.88)</li>
+  <li>Género femenino - OR 1.35 (1.23, 1.48)</li>
+  <li>Hematocrito mayor de 42 - OR 1.8 (1.32, 2.46)</li>
+  <li>Creatinina aumentada (&gt;1.4 g/dl) - OR 1.58 (1.36, 1.84)</li>
+  <li>Infiltrados en radiografía de tórax - OR 2.72 (1.36, 5.46)</li>
+</ul>
+<p></p>
+<p><strong>Modelo de Regresión Logística</strong><br>
+El modelo se construyó utilizando regresión logística. Los coeficientes (log OR) se calcularon de la siguiente manera:<br>
+- Edad mayor de 40 años: β = log(1.95) ≈ 0.667<br>
+- Género femenino: β = log(1.35) ≈ 0.300<br>
+- Hematocrito &gt; 42: β = log(1.8) ≈ 0.588<br>
+- Creatinina aumentada (&gt;1.4 g/dl): β = log(1.58) ≈ 0.457<br>
+- Infiltrados en radiografía de tórax: β = log(2.72) ≈ 1.000<br>
+<br>
+El modelo final se representa como:<br>
+LP(Y) = β0 + β1*X1 + β2*X2 + β3*X3 + β4*X4 + β5*X5<br>
+donde P(Y=1) es la probabilidad de mortalidad.</p>
+<p><strong>Resultados y Contribución de Factores</strong><br>
+Se presenta la siguiente tabla ilustrativa:<br>
+</p><table border="1" style="border-collapse:collapse;">
+  <tbody><tr>
+    <th>Factores de Riesgo</th>
+    <th>OR (95% CI)</th>
+    <th>β (log OR)</th>
+    <th>SE</th>
+    <th>Contribución al Riesgo Total (%)</th>
+  </tr>
+  <tr>
+    <td>Edad &gt; 40 años</td>
+    <td>1.95 (1.32, 2.88)</td>
+    <td>0.667</td>
+    <td>0.10</td>
+    <td>20.0</td>
+  </tr>
+  <tr>
+    <td>Género femenino</td>
+    <td>1.35 (1.23, 1.48)</td>
+    <td>0.300</td>
+    <td>0.09</td>
+    <td>9.0</td>
+  </tr>
+  <tr>
+    <td>Hematocrito &gt; 42</td>
+    <td>1.8 (1.32, 2.46)</td>
+    <td>0.588</td>
+    <td>0.12</td>
+    <td>17.6</td>
+  </tr>
+  <tr>
+    <td>Creatinina aumentada (&gt;1.4 g/dl)</td>
+    <td>1.58 (1.36, 1.84)</td>
+    <td>0.457</td>
+    <td>0.11</td>
+    <td>13.7</td>
+  </tr>
+  <tr>
+    <td>Infiltrados en radiografía de tórax</td>
+    <td>2.72 (1.36, 5.46)</td>
+    <td>1.000</td>
+    <td>0.15</td>
+    <td>30.0</td>
+  </tr>
+</tbody></table>
+<p></p>
+<p><strong>Escenario Clínico</strong><br>
+Se presenta un caso hipotético de un paciente masculino de 42 años, trabajador rural, con factores de riesgo específicos, donde el modelo estima una probabilidad de mortalidad de aproximadamente 43.91%.</p>
+<p><strong>Disclaimer</strong><br>
+<strong>Este modelo es provisorio y requiere un proceso de validación interna y externa.</strong> La información presentada se basa en datos simulados y revisiones sistemáticas previas, y no debe utilizarse para la toma de decisiones clínicas sin la validación adecuada.</p>
+<p>Prototipo del Modelo RAM: <a href="https://fernando-tortosa.shinyapps.io/ARBO" target="_blank">https://fernando-tortosa.shinyapps.io/ARBO</a></p></div>
+      </div>
+    </div>
+  </div>
+
+
+<div id="ss-connect-dialog" style="display: none;"><label>Attempting to reconnect...</label><label>&nbsp;</label></div><div id="ss-overlay" class="ss-gray-out" style="display: none;"></div></body></html>
